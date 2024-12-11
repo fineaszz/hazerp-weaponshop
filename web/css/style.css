@@ -1,0 +1,256 @@
+:root {
+    --backgroundColor: #121211;
+    --backgroundColorTransparent: rgba(18, 18, 17, 0.90);
+    --gradient1: #ff9600;
+    --gradient2: #efdb2e;
+    --secondaryColor: #171716;
+    --thirdColor: #41403f;
+    --borderColor: #23221f;
+    --textColor: #ffffff;
+    --scale: 1;
+}
+html, body {
+    height: 100%;
+}
+body {
+    /*background-image: url("https://cdn.discordapp.com/attachments/1012031200052908096/1101926071668056084/Safeimagekit-resized-img.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    color: #fff;
+    height: 100%;
+    /* background-color: #040404; */
+    background-color: var(--backgroundColorTransparent);
+    display: none;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #121211;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: var(--borderColor);
+}
+
+.navbar {
+    background-color: var(--backgroundColor);
+    color: #fff;;
+    min-height: 80px;
+    width: 100%;
+    z-index: 1001;
+    padding: 10px;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+.nav-link {
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    transition: none;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    background-image: linear-gradient(
+        0deg,
+        var(--gradient1) 0,
+        var(--gradient2) 100%,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"], input[type="number"] {
+    padding: 10px 15px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    background: var(--secondaryColor);
+    outline: none;
+    color: #ffffff;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="file"]:focus {
+    border: 1px solid var(--borderColor);
+    background: var(--secondaryColor);
+    color: #ffffff;
+    outline: none;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.btn-yellow {
+    font-size: 12px;
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor); 
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+    color: var(--textColor);
+    box-shadow: none;
+}
+.btn-yellow-large {
+    font-size: 14px;
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--borderColor); 
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: var(--textColor);
+    box-shadow: none;
+    width: 100%;
+}
+
+.btn-yellow:hover, 
+.btn-yellow:active, 
+.btn-yellow:focus,
+.btn-yellow-large:hover, 
+.btn-yellow-large:active, 
+.btn-yellow-large:focus{
+    color: var(--textColor);    
+    background-color: var(--secondaryColor); 
+}
+
+.yellow-gradient-text {
+    background-image: linear-gradient(
+        0deg,
+        var(--gradient1) 0,
+        var(--gradient2) 100%,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+}
+.account-balance-container {
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+.account-balance-container h5{ 
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.account-balance {
+    color: #41403f;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.form-control::placeholder {
+    color: #acaca5;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #acaca5;
+    font-weight: 600;
+    font-size: 12px;
+
+}
+
+.form-control::-ms-input-placeholder {
+    color: #acaca5;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.main {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+.card-grid {    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    grid-row: span 1;
+    grid-column: span 1;
+    padding: 20px;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.card img {
+    height: 150px;
+}
+.card-title {
+    color: var(--textColor);
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: .5vw;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    background-image: linear-gradient(
+        0deg,
+        var(--gradient1) 0,
+        var(--gradient2) 100%,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background-size: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #fff;
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+}
+.nav-link:focus-visible {
+    outline: 0;
+    border: 0px solid #fff;
+    box-shadow: none;
+}
+
+.nav-item:focus-visible {
+    outline: 0;
+    border: 0px solid #fff;
+    box-shadow: none;
+}
+
+img {
+    color: var(--textColor);
+}
